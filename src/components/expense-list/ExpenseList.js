@@ -1,17 +1,18 @@
-import './ExpenseList.css'
+import './ExpenseList.css';
+import CardWrapper from '../card/CradWrapper';
 import ExpenseItem from '../ExpenseItem';
 
 const ExpenseList = (props) => {
     const expenses = props.expenses;
     return (
-        <div className="expenses">
+        <CardWrapper className="expenses">
             {expenses.map((expense) => {
                 return <ExpenseItem title={expense.title}
                     date={expense.date}
                     amount={expense.amount}
                 />
             })}
-        </div>
+        </CardWrapper>
     );
 }
 
